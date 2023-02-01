@@ -15,6 +15,16 @@ def mypage():
        print(request.form)
        return redirect("/")
        
+@app.route('/mypage/contact', methods=['GET', 'POST'])
+def mypage():
+   if request.method == 'GET':
+       print("We received GET")
+       return render_template("child-2.html")
+   elif request.method == 'POST':
+       print("We received POST")
+       print(request.form)
+       return redirect("/")
+
 
 if __name__ == "__main__":
     app.run()

@@ -16,7 +16,7 @@ def mypage():
        return redirect("/")
        
 @app.route('/mypage/contact', methods=['GET', 'POST'])
-def mypage():
+def mycontact():
    if request.method == 'GET':
        print("We received GET")
        return render_template("child-2.html")

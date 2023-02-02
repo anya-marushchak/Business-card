@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My library</title>
+</head>
+
+<body>
+
+  <form>
+    
+    <label for="title">Book title</label>
+    <input type="text" id="title" name="title"><br><br>
+
+    <ul>
+      <li>
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author"><br><br>
+      </li>
+      <li>
+        <label for="year">Publication year</label>
+        <input type="text" id="year" name="year"><br><br>
+      </li>
+      <li>
+        <label for="description">Опис</label>
+        <textarea cols=40 rows=4 type="textbox" id="description" name="description" placeholder="Опис..."></textarea><br>
+      </li>
+    </ul>
+
+    <method="post" enctype=multipart/form-data>
+    <label for="img">Cover image</label>
+    <input type="file" name="file">
+    <input type="submit" value="upload"><br><br>
+
+    <input type="submit" value="send">
+    
+  </form>
+
+</body>
+
+</html>

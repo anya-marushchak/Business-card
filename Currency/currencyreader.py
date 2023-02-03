@@ -1,4 +1,4 @@
-import requests,csv
+import requests
 
 response = requests.get("http://api.nbp.pl/api/exchangerates/tables/C?format=json")
 data = response.json()
@@ -8,10 +8,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 import csv
-with open('currency.csv', 'rb') as csvfile:
-    currencyreader = csv.reader(csvfile)
-    for row in currencyreader:
-        print (row)
+with open('rates.csv', 'rb') as csvfile:
+    currencyreader = csv.rates(csvfile)
 
 
 @app.route("/currency", methods=["GET", "POST"])

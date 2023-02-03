@@ -2,10 +2,10 @@
 <html>
 <body>
 
-<h1>Currency code</h1>
+<h1>Currency calculator</h1>
 
 
-<form action="/"rates.csv>
+<form action="/"action_page.php>
   <label for="code">Choose a currency code:</label>
   <select name="code" id="code">
     <option value="USD">USD</option>
@@ -24,10 +24,15 @@
   </select>
   <br><br>
   <input type="submit" value="Submit">
+  <br><br>
+
+  <label for="amount">Choose amount of currency to buy :</label>
+  <input type="number" id="number" name="number"><br><br>
+  <input type="submit" value="Submit">
+
 </form>
 
-<p>Click the "Submit" button and the form-data will be sent to a page on the 
-server called "action_page.php".</p>
+
 
 </body>
 </html>

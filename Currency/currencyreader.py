@@ -22,7 +22,7 @@ def login():
     amount = data.get("amount")
 
     if code == code['USD']:
-      return amount*
+      return amount*4.2534
 
   return render_template("rates.html")
 

@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 import csv
 with open('rates.csv', 'rb') as csvfile:
-    currencyreader = csv.rates(csvfile)
+    rates = csv.rates(csvfile)
 
 
 @app.route("/currency", methods=["GET", "POST"])

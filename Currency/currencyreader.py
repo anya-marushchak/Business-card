@@ -8,8 +8,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 import csv
-with open('rates.csv', 'rb') as csvfile:
-    rates = csv.rates(csvfile)
+with open('rates.csv', newline="") as csvfile:
+    rates = csv.reader(csvfile)
 
 
 @app.route("/currency", methods=["GET", "POST"])

@@ -1,4 +1,4 @@
-import csv
-with open('rates.csv' ,newline='') as csvfile:
-   
-    reader = csv.DictReader(csvfile)
+import requests
+
+response = requests.get("http://api.nbp.pl/api/exchangerates/tables/C?format=json")
+data = response.json()

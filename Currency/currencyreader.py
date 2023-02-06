@@ -31,7 +31,7 @@ def amount():
     if code == code['EUR']:
       return amount*4.6388
 
-  return render_template("rates.html")
+  return render_template("index.html")
 
 
 if __name__ == "__main__":

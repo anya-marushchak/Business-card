@@ -34,13 +34,6 @@ def amount():
 
   return render_template("index.html")
 
-@app.route('/currency/zl', methods=['GET', 'POST'])
-def mypage():
-  if request.method == 'GET':
-      print("We received GET")
-      return render_template("index-1.html")
- 
-
 
 if __name__ == "__main__":
   app.run()

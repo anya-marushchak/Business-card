@@ -11,9 +11,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def form_view():
   if request.method == "POST":
     file = request.files['file']
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+    print (file.filename)
+    file.save(n(app.config['UPLOAD_FOLDER'], file.filename))
     return "File is uploaded"
-  return render_template('form_with_image_example.html')
+  return render_template('lib.html')
 
 if __name__ == '__main__':
   app.run(debug=True)

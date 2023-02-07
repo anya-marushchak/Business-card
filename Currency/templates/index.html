@@ -2,14 +2,15 @@
 <html>
 <head>
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="href= {{ url_for('static',filename='style.css') }}">
 
 </head>
 
 <body>
 
 <h1 class="first">Currency calculator</h1>
-<form action="/"action_page.php>
+
+<form method="post" enctype=multipart/form-data>
   
   <label for="code" >Choose a currency code:</label>
   <select name="code" id="code">
@@ -18,8 +19,6 @@
     <option value="CAD">CAD</option>
     <option value="EUR">EUR</option>
   </select>
-  <br><br>
-  <input type="submit" value="Submit">
   <br><br>
 
   <label for="amount">Choose amount of currency to buy :</label>

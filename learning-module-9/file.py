@@ -12,7 +12,7 @@ def form_view():
   if request.method == "POST":
     file = request.files['file']
     print (file.filename)
-    file.save(app.config['UPLOAD_FOLDER'], file.filename)
+    file.save("uploads\test_file.jpg ")
     return "File is uploaded"
   return render_template('lib.html')
 
